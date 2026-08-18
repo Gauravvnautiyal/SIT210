@@ -14,7 +14,7 @@ I used separate functions for different parts of the lighting system.
 
 `controlLights()` controls the timing of the lights. It turns the porch light OFF after 30 seconds and then turns the hallway light OFF after another 30 seconds.
 
-Using separate functions makes the program easier to understand because each function has a specific job. It also makes it easier to change a particular part of the program without changing the whole program.
+Using separate functions makes the program easier to understand and makes it easier to change a particular part of the program without changing the whole program.
 
 ## Circuit
 
