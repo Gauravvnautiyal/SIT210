@@ -1,71 +1,47 @@
-# SIT210 Task 2.1P - Sending Temperature and Light Data to the Web
+# Task 2.1P - Sending Temperature and Light Data to the Web
 
-## Overview
+## Aim
 
-This project is part of SIT210 Embedded Systems Development. The aim of this task is to collect temperature and light data using an Arduino Nano 33 IoT and send the readings to the web using ThingSpeak.
+The aim of this task is to collect temperature, humidity and light
+data using sensors and send the data to ThingSpeak over Wi-Fi.
 
-The system is designed for Linda's assisted living scenario, where environmental conditions such as room temperature and light levels need to be monitored.
+## Components Used
 
-## Hardware Used
+- Arduino board
+- DHT22 temperature and humidity sensor
+- BH1750 light sensor
+- Wi-Fi
+- ThingSpeak
 
-* Arduino Nano 33 IoT
-* DHT22 Temperature and Humidity Sensor
-* BH1750 Light Sensor
-* Breadboard
-* Jumper wires
+## Circuit
 
-## Software and Libraries
+The sensors were connected to the Arduino as shown below.
 
-* Arduino IDE
-* WiFiNINA library
-* ThingSpeak library
-* DHT library
-* BH1750 library
-* Wire library
+![Circuit Setup](circuit.jpg)
 
-## Sensors
+## Arduino Code
 
-The DHT22 sensor is used to measure the room temperature.
+The Arduino program reads the temperature, humidity and light
+intensity values and sends them to ThingSpeak.
 
-The BH1750 sensor is used to measure the light intensity in the room in lux.
+The complete code is available in:
 
-## ThingSpeak
+`Task2.1P.ino`
 
-The sensor readings are sent to a ThingSpeak channel using Wi-Fi.
+## Serial Monitor
 
-* Field 1: Temperature
-* Field 2: Light Intensity
+The sensor readings can be observed in the Serial Monitor.
 
-The Arduino sends updated sensor readings to ThingSpeak every 30 seconds.
+![Serial Monitor](serial_monitor.jpg)
 
-## Webhook Understanding
+## ThingSpeak Results
 
-Webhooks allow one system to automatically send information to another system when an event occurs. In this project, the Arduino collects new sensor readings and sends the temperature and light data to ThingSpeak over Wi-Fi.
+The sensor data is uploaded to ThingSpeak and displayed using
+graphs.
 
-The ThingSpeak functions in the Arduino code are responsible for sending the sensor data to the web. The `ThingSpeak.setField()` functions assign the sensor readings to the ThingSpeak fields, while `ThingSpeak.writeFields()` sends the data to the ThingSpeak channel.
+![ThingSpeak Results](thingspeak.jpg)
 
-## Project Images
+## Result
 
-### Circuit
-
-![Circuit](Circuit.jpeg)
-
-### Circuit Diagram
-
-![Circuit Diagram](Wikwo_circuit.png)
-
-### Light Intensity
-
-![Light Intensity](Light_intensity.png)
-
-### Temperature and Humidity
-
-![Temperature and Humidity](Temprature_and_humidity.png)
-
-## Main Code
-
-The main Arduino program is:
-
-`TASK2.1P_Webhooks.ino`
-
-The program connects the Arduino to Wi-Fi, reads the temperature and light sensor values, and sends the readings to ThingSpeak every 30 seconds.
+The task successfully collected sensor data and transmitted it
+to the web using ThingSpeak.
