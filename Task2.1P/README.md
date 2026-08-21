@@ -17,7 +17,7 @@ data using sensors and send the data to ThingSpeak over Wi-Fi.
 
 The sensors were connected to the Arduino as shown below.
 
-![Circuit Setup](circuit.jpg)
+![Circuit Setup](circuit.png)
 
 ## Arduino Code
 
@@ -32,14 +32,14 @@ The complete code is available in:
 
 The sensor readings can be observed in the Serial Monitor.
 
-![Serial Monitor](serial_monitor.jpg)
+![Serial Monitor](serial_monitor.png)
 
 ## ThingSpeak Results
 
 The sensor data is uploaded to ThingSpeak and displayed using
 graphs.
 
-![ThingSpeak Results](thingspeak.jpg)
+![ThingSpeak Results](thingspeak.png)
 
 ## Result
 
