@@ -17,7 +17,7 @@ data using sensors and send the data to ThingSpeak over Wi-Fi.
 
 The sensors were connected to the Arduino as shown below.
 
-![Circuit Setup](circuit.png)
+![Circuit Setup](Circuit.png)
 
 ## Arduino Code
 
